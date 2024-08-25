@@ -1,0 +1,93 @@
+.inpunt_container{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.custom_input {
+    display: flex;
+    margin-left: 10px;
+    width: 100%;          
+    max-width: 30rem;
+    border: none;
+    outline: none;     
+    font-size: 16px;
+    transition: border-color 0.2s ease-in-out;
+  } 
+  
+.button {
+    cursor: pointer;
+  }
+
+  .search_cont{
+    display: flex;
+    border-style: solid;
+    border-radius: 14px;
+    padding: 12px;
+    color: #e1e1e1;
+  }
+
+  .search_cont:hover{
+    border-color: #c3c5c5;
+  }
+
+  .search_icon{
+    width: 20px;
+  }
+
+  .add_btn {
+    margin: 20px;
+  }
+
+  .custom_btn {
+    display: flex;
+    padding: 10px; 
+    height: 53px;
+    align-items: center;
+    font-size: 1rem; 
+    cursor: pointer;
+    border-radius:14px ;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .custom_btn_outline {
+    background-color: transparent;
+    border:3px solid #e1e1e1; 
+    color: #5370a9; 
+  }
+  
+
+  .filter{
+    width: 100%;
+    height: 100%;
+  }
+
+  .add_btn{
+    display: flex;
+    gap:  10px;
+  }
+
+  .cancel{
+    width: 20px;
+    height: 20px;
+  }
+
+  .filtbtn:hover{
+    background-color: #e8e9e9;
+  }
+
+  .edit_form{
+    display: flex;
+    align-items: flex-start;
+    gap: 10px
+  } 
+
+.button_container {
+  display: flex;
+  gap: 10px;
+}
+
+.custom_btn {
+  padding: 8px;
+  height: auto;
+}

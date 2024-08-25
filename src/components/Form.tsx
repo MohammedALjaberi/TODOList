@@ -7,7 +7,6 @@ import descIcon from '../assets/PajamasTextDescription.svg'
 import Radio from './Radio'
 import { uid } from 'uid'
 import { Dispatch, SetStateAction, useState } from 'react'
-// import { useUID, useUIDSeed } from 'react-uid';
 
 export type Task = {
   id: string

@@ -23,15 +23,6 @@
     background-color: #fefefe; 
   }
   
-  /* .customTableZebra tbody tr:nth-child(odd) {
-    background-color: #f4f4f4;
-  } */
-
-  .line_throw{
-    padding: 1px;
-    width: 495%;
-    background-color: #e8e8e8;
-  }
 
   .img_container {
     display: flex;
