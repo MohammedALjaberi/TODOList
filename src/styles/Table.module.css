@@ -1,0 +1,47 @@
+.customTableContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  
+  .customTable {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .customTable th, .customTable td {
+    /* border: 1px solid #f4f4f4; */
+    padding: 24px;
+    text-align: left;
+  }
+  
+  .customTable th {
+    background-color:#f3f6fa;
+  }
+  
+  .customTableZebra tbody tr:nth-child(even) {
+    background-color: #fefefe; 
+  }
+  
+  /* .customTableZebra tbody tr:nth-child(odd) {
+    background-color: #f4f4f4;
+  } */
+
+  .line_throw{
+    padding: 1px;
+    width: 495%;
+    background-color: #e8e8e8;
+  }
+
+  .img_container {
+    display: flex;
+    gap: 30px;
+  }
+  .icon {
+    width: 24px;
+    cursor: pointer;
+  }
+  .trashbtn{
+    background: transparent;
+    border: none;
+  }

@@ -1,0 +1,16 @@
+/* Radio.module.css */
+
+.radio {
+
+    width: 30px;  
+    height: 1rem; 
+    border-radius: 50%;
+    border: 2px solid #ccc; 
+    background-color: #fff; 
+  }
+  .lab{
+    color: black;
+  }
+  
+
+  

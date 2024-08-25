@@ -1,0 +1,22 @@
+
+.cont_card{
+
+        padding: 24px;
+        width:100%;
+        background-color: #fafafa; 
+      }
+.custom_card{
+        box-shadow: 0 0 30px -3px #c2c3cb;
+        border-radius: 18px;
+        width: 100%;
+       
+      }
+      
+ .top_card{
+     padding: 32px;
+      }
+      
+.form {
+  display: flex;
+  margin-top: 20px;
+}

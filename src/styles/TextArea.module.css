@@ -1,0 +1,49 @@
+.inpunt_container{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.custom_input {
+    display: flex;
+    margin-left: 10px;
+    width: 100%;          
+    max-width: 30rem;
+    border: none;
+    outline: none;     
+    font-size: 20px;
+    transition: border-color 0.2s ease-in-out;
+  }
+  
+  
+
+  
+  /* .custom_input:hover {
+    border-color: #009de1; 
+  } */
+  
+  
+  button {
+    cursor: pointer;
+  }
+
+  .search_cont{
+    display: flex;
+    border-style: solid;
+    border-radius: 14px;
+    padding: 12px;
+    color: #e1e1e1;
+  }
+
+  .search_cont:hover{
+    border-color: #c3c5c5;
+  }
+
+  .search_icon{
+    width: 20px;
+  }
+
+  .add_btn {
+    margin: 20px;
+  }
+
