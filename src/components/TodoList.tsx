@@ -1,14 +1,30 @@
+import { useState, useCallback } from 'react'
 import wrapperStyle from '../styles/Wraper.module.css'
 import Form, { Task } from './Form'
 import Table from './Table'
 import SearchField from './SearchField'
 import HeroCss from '../styles/Hero.module.css'
 import NewTask from './NewTaskButton'
-import { useState } from 'react'
 
-const WraperCard = () => {
+const TodoList = () => {
   const [show, setShow] = useState(false)
   const [data, setData] = useState<Task[]>([])
+  const [searchQuery, setSearchQuery] = useState('')
+
+  const filteredTasks = data.filter(
+    (task) =>
+      task.task.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      task.description.toLowerCase().includes(searchQuery.toLowerCase()),
+  )
+
+  const handleSearch = useCallback((query: string) => {
+    setSearchQuery(query)
+  }, [])
+
+  const addTask = (newTask: Task) => {
+    setData((prevData) => [...prevData, newTask])
+    setShow(false)
+  }
 
   return (
     <div className={wrapperStyle.cont_card}>
@@ -18,20 +34,17 @@ const WraperCard = () => {
             <h1 className={HeroCss.custom_heading}>TO-DO List</h1>
             <NewTask onClick={() => setShow(true)} />
           </div>
-          <SearchField />
+          <SearchField onSearch={handleSearch} />
           {show && (
             <div className={wrapperStyle.form}>
               <Form
-                addTask={(e: Task) => {
-                  console.log('task: ', e)
-                  setData([...data, e])
-                }}
+                addTask={addTask}
                 setShow={setShow}
               />
             </div>
           )}
           <Table
-            tasks={data}
+            tasks={filteredTasks}
             setTasks={setData}
           />
         </div>
@@ -40,4 +53,4 @@ const WraperCard = () => {
   )
 }
 
-export default WraperCard
+export default TodoList
