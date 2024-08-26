@@ -1,7 +1,7 @@
 import newTaskCss from '../styles/NewTask.module.css'
 import plusIcon from '../assets/MaterialSymbolsLightAdd.svg'
 import { ButtonHTMLAttributes, DetailedHTMLProps } from 'react'
-const NewTask = (
+const NewTaskButton = (
   props?: DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>,
 ) => {
   return (
@@ -9,9 +9,13 @@ const NewTask = (
       {...props}
       className={`${newTaskCss.custom_btn} ${newTaskCss.custom_btn_outline}`}
     >
-      <img src={plusIcon}></img>Add new task
+      <img
+        src={plusIcon}
+        alt="Plus"
+      />
+      <span>Add new task</span>
     </button>
   )
 }
 
-export default NewTask
+export default NewTaskButton

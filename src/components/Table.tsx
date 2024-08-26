@@ -6,13 +6,17 @@ import { Dispatch, SetStateAction } from 'react'
 import { Task } from './Form'
 import UpdateRowForm from './UpdateRowForm'
 
-const Table = (props: { tasks: Task[]; setTasks: Dispatch<SetStateAction<Task[]>> }) => {
+type TablePropsType = {
+  tasks: Task[]
+  setTasks: Dispatch<SetStateAction<Task[]>>
+}
+const Table = (props: TablePropsType) => {
   const { tasks, setTasks } = props
   const [selectedTask, setSelectedTask] = useState<string | null>(null)
 
   const handleDelete = (id: string) => {
     const newList = tasks.filter((t) => t.id !== id)
-    setTasks([...newList])
+    setTasks(newList)
   }
 
   const handleEdit = (id: string) => {

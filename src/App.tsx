@@ -1,10 +1,6 @@
-import WraperCard from './components/WraperCard'
+import TodoList from './components/TodoList'
 const App = () => {
-  return (
-    <>
-      <WraperCard />
-    </>
-  )
+  return <TodoList />
 }
 
 export default App

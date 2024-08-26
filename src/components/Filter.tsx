@@ -7,6 +7,7 @@ const Filter = () => {
     >
       <img
         src={filerIcon}
+        alt="Filter"
         className={FilterCss.filter}
       />
     </button>

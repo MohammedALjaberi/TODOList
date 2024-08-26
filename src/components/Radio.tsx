@@ -1,6 +1,7 @@
 import styles from '../styles/Radio.module.css'
+import { Task } from './Form'
 
-type Status = 'Active' | 'Inactive'
+type Status = Task['status']
 
 const Radio = ({ value, setStatus }: { value: Status; setStatus: (e: Status) => void }) => {
   return (
@@ -26,7 +27,7 @@ const Radio = ({ value, setStatus }: { value: Status; setStatus: (e: Status) => 
         className={styles.radio}
         id="in2"
         value="Inactive"
-        checked={value == 'Inactive'}
+        checked={value === 'Inactive'}
         onChange={(e) => setStatus(e.target.value as Status)}
       />
       <label

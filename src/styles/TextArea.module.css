@@ -15,15 +15,7 @@
     transition: border-color 0.2s ease-in-out;
   }
   
-  
-
-  
-  /* .custom_input:hover {
-    border-color: #009de1; 
-  } */
-  
-  
-  button {
+  .button {
     cursor: pointer;
   }
 
@@ -45,5 +37,10 @@
 
   .add_btn {
     margin: 20px;
+  }
+
+  .error_message{
+    margin-inline-start: -60px; 
+    color: red;
   }
 

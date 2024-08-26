@@ -1,9 +1,9 @@
 import wrapperStyle from '../styles/Wraper.module.css'
 import Form, { Task } from './Form'
 import Table from './Table'
-import TextArea from './TextArea'
+import SearchField from './SearchField'
 import HeroCss from '../styles/Hero.module.css'
-import NewTask from './NewTask'
+import NewTask from './NewTaskButton'
 import { useState } from 'react'
 
 const WraperCard = () => {
@@ -18,7 +18,7 @@ const WraperCard = () => {
             <h1 className={HeroCss.custom_heading}>TO-DO List</h1>
             <NewTask onClick={() => setShow(true)} />
           </div>
-          <TextArea></TextArea>
+          <SearchField />
           {show && (
             <div className={wrapperStyle.form}>
               <Form
@@ -27,13 +27,13 @@ const WraperCard = () => {
                   setData([...data, e])
                 }}
                 setShow={setShow}
-              ></Form>
+              />
             </div>
           )}
           <Table
             tasks={data}
             setTasks={setData}
-          ></Table>
+          />
         </div>
       </div>
     </div>
