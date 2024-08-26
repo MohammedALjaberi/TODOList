@@ -3,12 +3,20 @@ import { Task } from './Form'
 
 type Status = Task['status']
 
-const Radio = ({ value, setStatus }: { value: Status; setStatus: (e: Status) => void }) => {
+const Radio = ({
+  value,
+  setStatus,
+  name,
+}: {
+  value: Status
+  setStatus: (e: Status) => void
+  name: string
+}) => {
   return (
     <div>
       <input
         type="radio"
-        name="radio-9"
+        name={name}
         className={styles.radio}
         id="in1"
         value="Active"
@@ -23,7 +31,7 @@ const Radio = ({ value, setStatus }: { value: Status; setStatus: (e: Status) => 
       </label>
       <input
         type="radio"
-        name="radio-9"
+        name={name}
         className={styles.radio}
         id="in2"
         value="Inactive"
