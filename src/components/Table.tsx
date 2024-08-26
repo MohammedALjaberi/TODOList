@@ -5,8 +5,12 @@ import { useState } from 'react'
 import { Dispatch, SetStateAction } from 'react'
 import { Task } from './Form'
 import UpdateRowForm from './UpdateRowForm'
+type TablePropsType = {
+ tasks: Task[]; 
+ setTasks: Dispatch<SetStateAction<Task[]>>
+  }
 
-const Table = (props: { tasks: Task[]; setTasks: Dispatch<SetStateAction<Task[]>> }) => {
+const Table = (props: TablePropsType ) => {
   const { tasks, setTasks } = props
   const [selectedTask, setSelectedTask] = useState<string | null>(null)
 
