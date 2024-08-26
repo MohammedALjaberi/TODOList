@@ -7,10 +7,12 @@ const Radio = ({
   value,
   setStatus,
   name,
+  id,
 }: {
   value: Status
   setStatus: (e: Status) => void
   name: string
+  id: string
 }) => {
   return (
     <div>
@@ -18,14 +20,14 @@ const Radio = ({
         type="radio"
         name={name}
         className={styles.radio}
-        id="in1"
+        id={`${id}-active`}
         value="Active"
         checked={value == 'Active'}
         onChange={(e) => setStatus(e.target.value as Status)}
       />
       <label
         className={styles.lab}
-        htmlFor="in1"
+        htmlFor={`${id}-active`}
       >
         Active
       </label>
@@ -33,16 +35,16 @@ const Radio = ({
         type="radio"
         name={name}
         className={styles.radio}
-        id="in2"
+        id={`${id}-inactive`}
         value="Inactive"
         checked={value === 'Inactive'}
         onChange={(e) => setStatus(e.target.value as Status)}
       />
       <label
         className={styles.lab}
-        htmlFor="in2"
+        htmlFor={`${id}-inactive`}
       >
-        inActive
+        Inactive
       </label>
     </div>
   )

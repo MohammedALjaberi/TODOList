@@ -59,7 +59,8 @@ const UpdateRowForm = (props: UpdateRowFormPropsT) => {
           <Radio
             value={task.status}
             setStatus={(e: 'Active' | 'Inactive') => setTask({ ...task, status: e })}
-            name="radio2"
+            name="radio-update"
+            id="update"
           />
         </div>
       </td>

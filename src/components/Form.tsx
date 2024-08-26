@@ -105,7 +105,8 @@ const Form = (props: TFormProps) => {
         <Radio
           value={task.status}
           setStatus={(e: Task['status']) => setTask({ ...task, status: e })}
-          name="radio9"
+          name="radio-form"
+          id="form"
         />
       </div>
 
