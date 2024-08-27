@@ -23,7 +23,6 @@ const TodoList = () => {
 
   const addTask = (newTask: Task) => {
     setData((prevData) => [...prevData, newTask])
-    setShow(false)
   }
 
   return (
